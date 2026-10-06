@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vendeurpro01.github.io/yannick-kiendrebeogo/sitemap.xml
