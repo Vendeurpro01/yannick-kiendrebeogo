@@ -300,7 +300,7 @@ fbq('init','1073096111999430');fbq('track','PageView');
     </div>
     <div class="hero-photo in-3">
       <div class="frame"><img src="yk-hero.jpg" alt="Yannick Kiendrebeogo, formateur en e-commerce à Ouagadougou" width="900" height="1125"></div>
-      <div class="badge"><b>+240</b><span>personnes ont acheté<br>mes formations en ligne</span></div>
+      <div class="badge"><b>+1&#160;000</b><span>personnes formées<br>directement</span></div>
       <div class="badge b2"><b>3</b><span>pays d'implantation<br>Burkina · Mali · Bénin</span></div>
     </div>
   </div>
@@ -308,10 +308,10 @@ fbq('init','1073096111999430');fbq('track','PageView');
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat"><b data-count="240" data-prefix="+">+240</b><span>apprenants en ligne</span></div>
+    <div class="stat"><b data-count="1000" data-prefix="+">+1&#160;000</b><span>personnes formées directement</span></div>
+    <div class="stat"><b data-count="3000" data-prefix="+">+3&#160;000</b><span>personnes formées indirectement</span></div>
     <div class="stat"><b data-count="30" data-prefix="+">+30</b><span>commerciaux dans mon équipe</span></div>
     <div class="stat"><b data-count="10" data-prefix="+">+10</b><span>pays parcourus</span></div>
-    <div class="stat"><b data-count="5">5</b><span>entités dans URS Group</span></div>
   </div>
 </div>
 
@@ -454,7 +454,7 @@ fbq('init','1073096111999430');fbq('track','PageView');
       <div class="testi reveal d1"><div class="res">2 ventes en 30 minutes</div><p>« J'ai effectué deux ventes en moins de trente minutes d'intervalle ce soir. Restons focus, concentrés et persévérants. »</p><div class="who">Membre du groupe Vendeur Pro</div></div>
       <div class="testi reveal d2" style="background:var(--navy);color:#fff;border:0"><div class="res" style="color:var(--gold)">Et toi ?</div><p style="color:#C9D6E6">Ton premier résultat peut être le prochain message que je recevrai. Choisis la formule qui te correspond.</p><a class="btn btn-primary" href="#offres" style="margin-top:auto">Voir les formules</a></div>
     </div>
-    <div class="proof-line reveal"><b>+240</b> personnes ont déjà acheté mes formations en ligne</div>
+    <div class="proof-line reveal"><b>+1&#160;000</b> personnes formées directement, <b>+3&#160;000</b> indirectement</div>
   </div>
 </section>
 
@@ -634,7 +634,7 @@ fbq('init','1073096111999430');fbq('track','PageView');
   /* Compteurs */
   var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);
     var el=e.target,end=+el.dataset.count,pre=el.dataset.prefix||'',t0=null;
-    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=pre+v;if(p<1)requestAnimationFrame(step);}
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=pre+v.toLocaleString('fr-FR').replace(/[\u202f\u00a0 ]/g,'\u00a0');if(p<1)requestAnimationFrame(step);}
     requestAnimationFrame(step);});},{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
   /* Fil de l'histoire qui se remplit */
